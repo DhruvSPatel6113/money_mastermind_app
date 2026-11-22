@@ -9,6 +9,7 @@ import GameScreen from './src/screens/GameScreen';
 import LeaderboardScreen from './src/screens/LeaderboardScreen';
 import RewardScreen from './src/screens/RewardScreen';
 import InvestmentCalculatorScreen from './src/screens/InvestmentCalculatorScreen';
+import AIPersonaScreen from './src/screens/AIPersonaScreen';
 
 const Stack = createStackNavigator();
 
@@ -35,31 +36,12 @@ export default function App() {
             cardStyle: { backgroundColor: '#090d16' },
           }}
         >
-          <Stack.Screen 
-            name="Home" 
-            component={HomeScreen} 
-            options={{ title: 'Money Mastermind' }} 
-          />
-          <Stack.Screen 
-            name="Game" 
-            component={GameScreen} 
-            options={{ title: 'Financial Arena' }} 
-          />
-          <Stack.Screen 
-            name="Calculator" 
-            component={InvestmentCalculatorScreen} 
-            options={{ title: 'SIP & Compound Calculator' }} 
-          />
-          <Stack.Screen 
-            name="Leaderboard" 
-            component={LeaderboardScreen} 
-            options={{ title: 'Global Leaderboard' }} 
-          />
-          <Stack.Screen 
-            name="Rewards" 
-            component={RewardScreen} 
-            options={{ title: 'Achievements & Badges' }} 
-          />
+          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Money Mastermind' }} />
+          <Stack.Screen name="Game" component={GameScreen} options={{ title: 'Adaptive Arena' }} />
+          <Stack.Screen name="AIPersona" component={AIPersonaScreen} options={{ title: 'AI Investor DNA' }} />
+          <Stack.Screen name="Calculator" component={InvestmentCalculatorScreen} options={{ title: 'SIP & Compound Calculator' }} />
+          <Stack.Screen name="Leaderboard" component={LeaderboardScreen} options={{ title: 'Global Competitions' }} />
+          <Stack.Screen name="Rewards" component={RewardScreen} options={{ title: 'Achievements & Badges' }} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
